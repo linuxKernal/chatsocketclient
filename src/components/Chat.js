@@ -94,6 +94,7 @@ function Chat({loginStatus,socket_io}) {
         // adding current user message to display area right
         setUsermessage((prev)=>[...prev,{"username":currentUser.username,"message":typeMessage,"type":"user","time":getTime()}])
         console.log("Message Sent",typeMessage);
+        setTypeMessage("");
     }
 
     
