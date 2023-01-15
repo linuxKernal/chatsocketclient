@@ -24,7 +24,7 @@ function Login({setUserLogin,socket_io}) {
   useEffect(() => {
 
     socket_io.on("joinRoomSuccess",(data)=>joinRoom(data))
-    fetch("http://localhost:5000/getrooms")
+    fetch("https://chatsocketserver-production.up.railway.app/getrooms")
     .then(res=> res.json())
     .then(text=>setRooms(text.rooms))
   }, [])
