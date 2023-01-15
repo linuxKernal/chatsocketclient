@@ -83,7 +83,7 @@ function Chat({loginStatus,socket_io}) {
         return ()=>{
             socket_io.emit("clientLeft")
         }
-
+        // eslint-disable-next-line
      }, [])
 
     // sending message
@@ -112,7 +112,7 @@ function Chat({loginStatus,socket_io}) {
                 </div>
                 <div className="p-1">
                     {
-                        
+                        // eslint-disable-next-line
                         roomUsers.map((user,index)=>{
                             if(search.trim()==="" || user.includes(search))
                             return <ProfileBar key={user} socket_io={socket_io} username={user} privilege={!index?"admin":"user"} superPrivilege={ currentUser.privilege === "admin" } />

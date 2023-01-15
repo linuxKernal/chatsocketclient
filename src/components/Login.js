@@ -27,6 +27,7 @@ function Login({setUserLogin,socket_io}) {
     fetch("https://chatsocketserver-production.up.railway.app/getrooms")
     .then(res=> res.json())
     .then(text=>setRooms(text.rooms))
+    // eslint-disable-next-line
   }, [])
   
   console.log("Login Mounted")
