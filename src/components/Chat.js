@@ -97,7 +97,10 @@ function Chat({loginStatus,socket_io}) {
         setTypeMessage("");
     }
 
-    
+    const handlerEvent  = (event)=>{
+        if (event.key === 'Enter') sendMessage()
+        console.log("Enter");
+    }
 
     
     return (
@@ -149,7 +152,7 @@ function Chat({loginStatus,socket_io}) {
                             <img className="w-8 h-8" src={fileclip} alt="" />
                             <input type="file" ref={file} onChange={showFile}  name="file" style={{"display":"none"}} />
                     </button>
-                    <input type="text" placeholder="write something..."  onChange={(e)=>setTypeMessage(e.target.value)} value={ typeMessage } className="w-full text-xl p-1 outline-none" />
+                    <input type="text" placeholder="write something..." onKeyDown={handlerEvent}  onChange={(e)=>setTypeMessage(e.target.value)} value={ typeMessage } className="w-full text-xl p-1 outline-none" />
                     <button onClick={sendMessage} className="p-0 px-4 hover:scale-105"> 
                         <img className="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/3318/3318406.png" alt="" />
                     </button>
