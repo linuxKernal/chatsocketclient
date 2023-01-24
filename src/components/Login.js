@@ -82,7 +82,7 @@ function Login({setUserLogin,socket_io}) {
                   </div>
                   { (room.split("_")[0]==="private" || room.split("_")[1]==="room" ) && <div className="flex bg-gray-100 border-gray-700 mb-3 my-4 items-center rounded-md">
                     <img src="https://img.icons8.com/windows/344/lock.png" alt="username" className="w-6 h-6 m-1.5" />
-                    <input type="text" id="password" placeholder={room.split("_")[1]==="room"?"Password (optional)":"Password"} value={password} onChange={event=> setPassword(event.target.value)} className="w-full p-2 outline-none bg-transparent" />
+                    <input type="password" id="password" placeholder={room.split("_")[1]==="room"?"Password (optional)":"Password"} value={password} onChange={event=> setPassword(event.target.value)} className="w-full p-2 outline-none bg-transparent" />
                   </div> }
                   <div className="flex justify-center my-4">
                     <button onClick={checkAuth} className="butn w-full p-1.5 text-xl bg-green-500 mx-auto">Join</button>
