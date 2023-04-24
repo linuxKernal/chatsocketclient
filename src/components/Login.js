@@ -24,7 +24,7 @@ function Login({setUserLogin,socket_io}) {
   useEffect(() => {
 
     socket_io.on("joinRoomSuccess",(data)=>joinRoom(data))
-    fetch("https://chatsocketserver-production.up.railway.app/getrooms")
+    fetch("https://socketchat.azurewebsites.net/")
     .then(res=> res.json())
     .then(text=>setRooms(text.rooms))
     // eslint-disable-next-line
