@@ -4,7 +4,7 @@ import Login from './Login';
 import { useState } from 'react'
 import { io } from 'socket.io-client'
 
-const socket = io("https://chatsocketserver-production.up.railway.app")
+const socket = io("https://socketchat.azurewebsites.net/")
 
 function App() {
   useEffect(() => {
