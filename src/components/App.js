@@ -3,8 +3,10 @@ import Chat from './Chat';
 import Login from './Login';
 import { useState } from 'react'
 import { io } from 'socket.io-client'
+import { URL } from '../config.js';
 
-const socket = io("https://socketchat.azurewebsites.net/")
+
+const socket = io(URL)
 
 function App() {
   useEffect(() => {

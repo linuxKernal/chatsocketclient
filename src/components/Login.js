@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { URL } from '../config.js'
 import logoImage from '../images/logo.png'
 
 
@@ -24,7 +25,7 @@ function Login({setUserLogin,socket_io}) {
   useEffect(() => {
 
     socket_io.on("joinRoomSuccess",(data)=>joinRoom(data))
-    fetch("https://socketchat.azurewebsites.net/getrooms")
+    fetch(`${URL}getrooms`)
     .then(res=> res.json())
     .then(text=>setRooms(text.rooms))
     // eslint-disable-next-line

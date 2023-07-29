@@ -1,4 +1,7 @@
 import React from 'react'
+import { URL } from '../config.js'
+
+
 
 function ChatText({data,type}) {
   let messageBox = ""
@@ -25,7 +28,7 @@ function ChatText({data,type}) {
           <span className={"p-1 my-2 max-w-lg  inline-block "+messageStyle} >
             {type !== "info" && <h3 className="text-gray-500">{data.username}</h3>}
            { data.message ? <p>{data.message}</p>:
-            <img src={"https://chatsocketserver-production.up.railway.app/"+data.image} alt="" className="w-72 h-60" />
+            <img src={`${URL}${data.image}`} alt="" className="w-72 h-60" />
            }
            {<p className="pl-1">{data.caption}</p>}
           </span>
