@@ -1,1 +1,1 @@
-export const URL = "https://socketchat.azurewebsites.net/"
+export const URL = "https://chatsocketserver-production.up.railway.app/"
